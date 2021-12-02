@@ -16,6 +16,7 @@ import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { FavoriesComponent } from './favories/favories.component';
 import { SigninComponent } from './Authentification/signin/signin.component';
 import { SignupComponent } from './Authentification/signup/signup.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -30,7 +31,8 @@ import { SignupComponent } from './Authentification/signup/signup.component';
     FilmDetailComponent,
     FavoriesComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
