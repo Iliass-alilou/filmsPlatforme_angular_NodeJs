@@ -1,0 +1,100 @@
+
+.addFavoris,.inFavoris{
+    position: absolute;
+    background: rgb(8, 155, 69);
+    top: 30px;
+    right: 30px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+    transform-origin: all;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+.addFavoris:hover {
+    color: rgb(8, 155, 69);
+    background: white;
+    border: 2px solid rgb(8, 155, 69);
+}
+
+.rate_date {
+    display: flex;
+}
+
+.rate_date>.rating {
+    margin-right: 40px;
+    font-size: 17px;
+}
+.rate_date>.rating::before {
+    content: "Rating :";
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.rate_date>.date::before {
+    content: "Date  :";
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.rate_date>.date {
+    font-size: 17px;
+}
+
+.addReview,
+.revues {
+    background: black;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+}
+
+.addReview>.title {
+    color: white;
+    font-size: 20px;
+}
+
+.addReview>.content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.addReview>.content>.textArea {
+    width: 90%;
+    margin-right: 40px;
+    height: 80px;
+}
+
+.addReview>.content>button {
+    background: rgb(97, 197, 97);
+    border: 2px 2px rgb(97, 197, 97);
+    outline: none;
+}
+
+.revues {
+    color: white;
+    list-style: none;
+}
+
+.revues>li {
+    margin-bottom: 50px;
+}
+
+.revues>li>.name {
+    font-size: 20px;
+}
+
+.revues>li>.name>span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.genre{
+    display: flex;
+}

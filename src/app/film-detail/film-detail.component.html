@@ -1,0 +1,42 @@
+<div class="container  mt-lg-5">
+  <div class="card mb-3" style="max-width: 900px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img width="100%" height="450" src="{{service.getImage(filmDetail.poster_path)}}"/>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class=" ">
+            <!-- <h1>{{filmDetail.title}}</h1> -->
+
+            <h2 *ngIf="filmDetail != undefined" class="title">{{filmDetail.title}} <span>( {{filmDetail.original_title}} )</span></h2>
+            <div class="rate_date">
+                <p class="rating" *ngIf="filmDetail!=null">{{filmDetail.vote_average}}/10</p>
+                <p class="date" *ngIf="filmDetail!=null">{{filmDetail.release_date}}</p>
+            </div>
+
+            <div>
+              <ul class="genre"  *ngFor="let g of filmDetail.genres" class="row" >
+                <li>{{g.name}}</li>
+              </ul>
+            </div>
+
+            <div class="card_right__details">
+              <div class="">
+                <p>{{filmDetail.overview}}</p>
+                <a [href]="filmDetail.homepage" target="_blank">Read more</a>
+              </div>
+              <div class=" center ">
+                <a href="https://www.youtube.com/watch?v=ot6C1ZKyiME" target="_blank">WATCH TRAILER</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-4">
+    <p (click)="addFavoris()" class="addFavoris" *ngIf="isFavoris==false" >Add to Favoris</p>
+    <i (click)="removeFavoris()" *ngIf="isFavoris==true" class="bi bi-heart-fill inFavoris"></i>
+  </div>
+</div>

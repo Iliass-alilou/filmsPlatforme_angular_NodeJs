@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="favorisComponant">
+        <p class="title">List of favorite movies :</p>
+        <ul>
+            <li [routerLink]="['../movie/'+films[index].id]" routerLinkActive="active"  *ngFor="let film of films; let index = index;">
+                <img src="{{service.getImage(films[index].poster_path)}}" />
+                <div class="left">
+                    <p>{{films[index].title}}</p>
+                    <i class="bi bi-heart-fill 2x"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
